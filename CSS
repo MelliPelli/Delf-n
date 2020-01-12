@@ -1,0 +1,284 @@
+/*vzhled stránky*/
+body{
+    background-color:white;
+    position: relative;
+    align-items: center;
+    overflow:hidden;
+    min-height: 100vh;
+    background-color: rgb(118, 218, 255);
+  }
+/*Styl nadpisu*/
+h1{
+    color:black;
+    font-style:Arial;
+    text-align:center;
+}
+/*Styl odstavců*/
+p{
+    color:black;
+    font-style:Arial;
+    text-align:left;
+    margin-left:10px;
+}
+
+
+/*Ohraničení odstavců*/
+.text{
+    font-size:24px;
+    position:absolute;
+    align-items:left;
+    background-color:rgba(128, 128, 128, 0.24);
+    margin-left:auto;
+    margin-right:auto;
+    width:60rem;
+    height:16rem;
+    border-radius:40px;
+    margin-top:50px;
+}
+/*Ohraničení odstavců*/
+.text2{
+    font-size:24px;
+    position:absolute;
+    align-items:left;
+    background-color:rgba(128, 128, 128, 0.24); ;
+    margin-left:auto;
+    margin-right:auto;
+    width:60rem;
+    height:15rem;
+    border-radius:40px;
+    margin-top:5px;
+
+}
+/*Ohraničení nadpisu*/
+.nadpis{
+    font-size: 22px;
+    position:relative;
+    align-items:left;
+    background-color:grey;
+    margin-left: auto;
+    margin-right: auto;
+    display:inline-block;
+    width:30rem;
+    height:7rem;
+    border-radius: 40px;
+}
+  /* Animace*/
+  body:before{
+    content: "";
+    position: absolute;
+    left: 50%;
+    min-width: 300vw;
+    min-height: 300vw;
+    background-color:rgb(223, 219, 219);
+      -webkit-animation-name: rotate;
+          animation-name: rotate;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  }
+  
+  body:before {
+    bottom: 15vh;
+    border-radius: 45%;
+    animation-duration: 25s;
+  }
+body:after{
+  bottom: 12vh;
+  opacity: .5;
+  border-radius: 47%;
+  animation-duration: 25s;
+}
+@keyframes rotate{
+0% {
+    -webkit-transform: translate(-50%, 0) rotateZ(0deg);
+            transform: translate(-50%, 0) rotateZ(0deg);
+  }
+  30% {
+    -webkit-transform: translate(-50%, -2%) rotateZ(90deg);
+            transform: translate(-50%, -2%) rotateZ(90deg);
+  }
+  60% {
+     -webkit-transform: translate(-50%, -4%) rotateZ(180deg);
+            transform: translate(-50%, -4%) rotateZ(180deg);
+  }
+  90% {
+    -webkit-transform: translate(-50%, -6%) rotateZ(270deg);
+            transform: translate(-50%, -6%) rotateZ(270deg);
+  }
+  100% {
+   -webkit-transform: translate(-50%, -8%) rotateZ(360deg);
+            transform: translate(-50%, -8%) rotateZ(360deg); 
+  }
+}
+
+
+/*pozice delfína*/
+.container {
+  top:-40rem ;
+  text-align: center;
+  margin-left:70rem;
+  position:relative;
+  transform: rotate(10deg);
+
+}
+
+
+
+/*pozice těla */
+
+
+.item{
+  font-size: 1.2rem;
+  width: 10rem;
+  height: 8rem;
+  margin: 1rem;
+  position: relative;
+  display: inline-block;
+}
+
+
+
+/*hlavní část*/
+.dolphin {
+  width:13em;
+  height: 13em;
+  background-color: transparent;
+  box-shadow: -2em 2em 0 0 darkgrey;
+  border-radius: 50%;
+  position: absolute;
+  top:-0.9em;
+  left:1.6em;
+  transform: rotate(80deg);
+}
+/*dolní ploutev*/
+.dolphin:before {
+  content: "";
+  width: 6em;
+  height: 0.8em;
+  background-color: #A9A9A9;
+  position: absolute;
+  top:240px;
+  left:130px;
+  z-index:1;
+  border-radius: 50%;
+  transform: rotate(-20deg);
+}
+/*druhá ploutev*/
+.dolphin:after {
+  content: "";
+  width: 6em;
+  height: 0.8em;
+  background-color: #A9A9A9;
+  position: absolute;
+  top:220px;
+  left:130px;
+  z-index:1;
+  border-radius: 50%;
+  transform: rotate(-47deg);
+}
+/*břicho*/
+.dolphin-line {
+  width: 12.5em;
+  height: 12.8em;
+  background-color: transparent;
+  box-shadow: -1em 0.8em 0 0 gray;
+  border-radius: 50%;
+  position: absolute;
+  top:-15px;
+  left:33px;
+  transform: rotate(80deg);
+}
+/*ploutev na zádech*/
+ .dolphin2 {
+   position: absolute;
+   width: 0;
+   height: 0;
+   border-left: 30px solid transparent;
+   border-right: 30px solid transparent;
+   border-bottom: 100px solid #A9A9A9;   
+   transform: rotate(-130deg);
+   border-radius: 120% 7% 70% 0;
+   top:-30px;
+   left:-20px;
+}
+/*ploutev na hrudi*/
+ .dolphin3 {
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+   border-right: 10px solid transparent;
+   border-bottom: 100px solid #A9A9A9; 
+  position: absolute;
+  top:-40px;
+  left:90px;
+  z-index:1;
+  border-radius: 50%;
+   border-radius: 100% 20% 120% 0;
+   transform: rotate(20deg);
+}
+/*druhá ploutev na hrudi*/
+.dolphin4{
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+   border-right: 10px solid transparent;
+   border-bottom: 100px solid grey; 
+  position: absolute;
+  top:-30px;
+  left:77px;
+  z-index:1;
+  border-radius: 50%;
+   border-radius: 100% 20% 120% 0;
+   transform: rotate(20deg);  
+}
+/*hlava*/
+.head{
+content: "";
+ width: 0;
+ height: 0;
+ border-left: 10px solid transparent;
+ border-right: 10px solid transparent;
+ border-bottom: 100px solid #A9A9A9; 
+ position: absolute;
+ top:-61px;
+ left:174px;
+ z-index:1;
+ border-radius: 50%;
+ border-radius: 90% 10% 120% 0;
+ transform: rotate(-72deg); 
+}
+/*stín*/
+.head-shadow {
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 100px solid grey; 
+  position: absolute;
+  top:-54px;
+  left:171px;
+  z-index:1;
+  border-radius: 50%;
+  border-radius: 90% 0% 150% 0;
+  transform: rotate(115deg);
+}
+/*stín*/
+.head-shadow2 {
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 2px solid transparent;
+  border-right: 2px solid transparent;
+  border-bottom: 100px solid grey; 
+  position: absolute;
+  top:-54px;
+  left:177px;
+  z-index:1;
+  border-radius: 50%;
+  border-radius: 50% 50% 20% 50%;
+  transform: rotate(120deg);
+}    
