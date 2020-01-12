@@ -1,3 +1,3 @@
 # Delfin
 
-Zde mám webovou stranku s delfínem.
+Zde mám kód v HTML a CSS.
